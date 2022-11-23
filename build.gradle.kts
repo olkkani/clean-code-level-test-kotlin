@@ -36,6 +36,7 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	// view template
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
 	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	// common
