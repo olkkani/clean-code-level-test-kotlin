@@ -42,7 +42,11 @@ dependencies {
 	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	// common
+	implementation("org.apache.commons:commons-text:1.10.0")
+	implementation("org.apache.commons:commons-lang3:3.12.0")
+	implementation("commons-io:commons-io:2.11.0")
 	// other
+
 }
 
 tasks.withType<KotlinCompile> {
