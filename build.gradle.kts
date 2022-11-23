@@ -14,6 +14,10 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 configurations {
+	all {
+		// spring boot 기본 logger 제외
+		exclude(module = "spring-boot-starter-logging")
+	}
 	compileOnly {
 		extendsFrom(configurations.annotationProcessor.get())
 	}
