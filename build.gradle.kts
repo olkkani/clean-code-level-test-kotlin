@@ -17,6 +17,8 @@ configurations {
 	all {
 		// spring boot 기본 logger 제외
 		exclude(module = "spring-boot-starter-logging")
+		// was tomcat 제외
+		exclude(module = "spring-boot-starter-tomcat")
 	}
 	compileOnly {
 		extendsFrom(configurations.annotationProcessor.get())
@@ -35,6 +37,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	// was
+	implementation("org.springframework.boot:spring-boot-starter-undertow")
 	// logging
 	implementation("org.springframework.boot:spring-boot-starter-log4j2")
 	// view template
