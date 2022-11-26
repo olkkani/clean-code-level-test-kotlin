@@ -1,7 +1,31 @@
+# Spring Profiles Group
+spring.profiles.group:
+  "local": "common,local"
+---
+# common Profile
 spring:
+  config:
+    activate:
+      on-profile: common
+---
+# common-jpa
+spring:
+  config:
+    activate:
+      on-profile: common-jpa
+---
+# local Profile
+spring:
+  config:
+    activate:
+      on-profile: local
   devtools:
     livereload:
       enabled: true
+    restart:
+      enabled: false
   thymeleaf:
     cache: false
-
+    prefix: classpath:templates/
+    suffix: .html
+---
