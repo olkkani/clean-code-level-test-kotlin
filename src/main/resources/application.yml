@@ -28,4 +28,10 @@ spring:
     cache: false
     prefix: classpath:templates/
     suffix: .html
+server:
+  port : 8080
+  undertow:
+    threads:
+      io: 16
+      worker: 400
 ---
