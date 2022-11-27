@@ -3,6 +3,7 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- content css -->
 <link rel="stylesheet" th:href="@{/node_modules/bootstrap/dist/css/bootstrap.css}">
@@ -16,7 +17,7 @@
     <!-- header fragment 사용 -->
     <th:block th:replace="fragments/common_header :: common_header"></th:block>
     <!-- content fragment 사용 -->
-    <main class="">
+    <main class="container px-4 py-5">
         <th:block layout:fragment="content"></th:block>
     </main>
     <!-- footer fragment 사용 -->
