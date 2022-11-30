@@ -4,7 +4,6 @@ plugins {
 	id("org.springframework.boot") version "2.7.5"
 	id("io.spring.dependency-management") version "1.1.0"
 	id("io.freefair.lombok") version "6.5.1"
-	id("com.github.node-gradle.node") version "3.5.0"
 	kotlin("jvm") version "1.7.21"
 	kotlin("plugin.spring") version "1.7.21"
 }
