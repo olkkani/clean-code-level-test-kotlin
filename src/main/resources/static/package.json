@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.3",
     "jquery": "^3.6.1",
     "tui-grid": "^4.21.7"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.0"
   }
 }
