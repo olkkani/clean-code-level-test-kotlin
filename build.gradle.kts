@@ -40,6 +40,7 @@ dependencies {
 	// was
 	implementation("org.springframework.boot:spring-boot-starter-undertow")
 	// logging
+	implementation("io.github.microutils:kotlin-logging:3.0.4")
 	implementation("org.springframework.boot:spring-boot-starter-log4j2")
 	// view template
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
