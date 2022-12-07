@@ -12,41 +12,48 @@
 <th:block layout:fragment="script">
     <script type="text/javascript" th:src="@{/js/util/drag-up-loader.js}"></script>
 </th:block>
-
 <!-- Content -->
-<div layout:fragment="content">
-    <form th:action method="post" enctype="multipart/form-data">
-        <div class="container">
-            <div>
-                <label>
-                    <p>문제</p>
-                    <input type="text" name="question" id="question">
-                </label>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label>선택지 A</label>
-                    <div th:class="content"></div>
-                </div>
-                <div class="col">
-                    <label>선택지 B</label>
-                    <div th:class="content"></div>
+<div layout:fragment="content" class="border-1 border-dark">
+    <form action method="post" enctype="multipart/form-data">
+
+            <div class="m-2">
+                <p for="question" class="h5">문제</p>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="question" name="question" aria-describedby="basic-addon3">
                 </div>
             </div>
-            <label>정답</label>
-            <div class="row">
-                <div class="col">
-                    <label th:class="section"><input type="radio" name="answer" th:value="A" checked>A</label>
-                </div>
-                <div class="col">
-                    <label><input type="radio" name="answer" th:value="B" >B</label>
+
+            <div class="container m-2 p-0">
+                <div class="row gx-5">
+                    <div class="col">
+                        <label>선택지 A</label>
+                        <input th:type="file" >
+                    </div>
+                    <div class="col">
+                        <label>선택지 B</label>
+                    </div>
                 </div>
             </div>
-            <div>
-                <label>해설</label>
-                <input type="text" name="answerComment">
+
+            <div class="container m-2 p-0">
+                <p class="h5">정답</p>
+                <div class="row gx-5">
+                    <div class="col">
+                        <label><input type="radio" name="answer" th:value="A" checked>A</label>
+                    </div>
+                    <div class="col">
+                        <label><input type="radio" name="answer" th:value="B" >B</label>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="m-2">
+                <p class="h5">해설</p>
+                <textarea class="form-control" name="answerComment"></textarea>
+            </div>
+            <div class="float-end">
+                <button type="submit" class="btn btn-primary">등록</button>
+            </div>
     </form>
 </div>
 </html>
