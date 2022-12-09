@@ -13,14 +13,14 @@
 <script type="text/javascript" th:src="@{/library/bootstrap-5.2.3-dist/js/bootstrap.bundle.js}"></script>
 <block layout:fragment="script"></block>
 
-<body class="">
+<body class="text-bg-dark">
     <!-- header fragment 사용 -->
-    <th:block th:replace="~{fragments/common_header :: common_header}"></th:block>
+    <th:block th:replace="~{fragments/common-header :: common_header}"></th:block>
     <!-- content fragment 사용 -->
     <main class="container-md px-md-5">
         <th:block layout:fragment="content"></th:block>
     </main>
     <!-- footer fragment 사용 -->
-    <th:block th:replace="~{fragments/common_footer :: common_footer}"></th:block>
+    <th:block th:replace="~{fragments/common-footer :: common_footer}"></th:block>
     </body>
 </html>
