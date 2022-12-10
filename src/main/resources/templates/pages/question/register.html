@@ -13,47 +13,47 @@
     <script type="text/javascript" th:src="@{/js/util/drag-up-loader.js}"></script>
 </th:block>
 <!-- Content -->
-<div layout:fragment="content" class="border-1 border-dark">
-    <form action method="post" enctype="multipart/form-data">
+<div layout:fragment="content">
+    <form action method="post" enctype="multipart/form-data" class="border border-white">
 
-            <div class="m-2">
-                <p for="question" class="h5">문제</p>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="question" name="question" aria-describedby="basic-addon3">
+        <div class="m-2">
+            <p for="question" class="h5">문제</p>
+            <div class="input-group">
+                <input type="text" class="form-control" id="question" name="question" aria-describedby="basic-addon3">
+            </div>
+        </div>
+
+        <div class="container m-2 p-0">
+            <div class="row gx-5">
+                <div class="col">
+                    <label>선택지 A</label>
+                    <input th:type="file">
+                </div>
+                <div class="col">
+                    <label>선택지 B</label>
                 </div>
             </div>
+        </div>
 
-            <div class="container m-2 p-0">
-                <div class="row gx-5">
-                    <div class="col">
-                        <label>선택지 A</label>
-                        <input th:type="file" >
-                    </div>
-                    <div class="col">
-                        <label>선택지 B</label>
-                    </div>
+        <div class="container m-2 p-0">
+            <p class="h5">정답</p>
+            <div class="row gx-5">
+                <div class="col">
+                    <label><input type="radio" name="answer" th:value="A" checked>A</label>
+                </div>
+                <div class="col">
+                    <label><input type="radio" name="answer" th:value="B">B</label>
                 </div>
             </div>
+        </div>
 
-            <div class="container m-2 p-0">
-                <p class="h5">정답</p>
-                <div class="row gx-5">
-                    <div class="col">
-                        <label><input type="radio" name="answer" th:value="A" checked>A</label>
-                    </div>
-                    <div class="col">
-                        <label><input type="radio" name="answer" th:value="B" >B</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="m-2">
-                <p class="h5">해설</p>
-                <textarea class="form-control" name="answerComment"></textarea>
-            </div>
-            <div class="float-end">
-                <button type="submit" class="btn btn-primary">등록</button>
-            </div>
+        <div class="m-2">
+            <p class="h5">해설</p>
+            <textarea class="form-control" name="answerComment"></textarea>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">등록</button>
+        </div>
     </form>
 </div>
 </html>
