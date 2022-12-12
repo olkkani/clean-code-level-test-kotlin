@@ -42,6 +42,7 @@ dependencies {
 	// logging
 	implementation("io.github.microutils:kotlin-logging:3.0.4")
 	implementation("org.springframework.boot:spring-boot-starter-log4j2")
+	implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.1")
 	// view template
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
@@ -51,6 +52,9 @@ dependencies {
 	implementation("org.apache.commons:commons-text:1.10.0")
 	implementation("org.apache.commons:commons-lang3:3.12.0")
 	implementation("commons-io:commons-io:2.11.0")
+	// database
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.postgresql:postgresql:42.5.1")
 	// other
 	implementation("commons-fileupload:commons-fileupload:1.4")
 }
