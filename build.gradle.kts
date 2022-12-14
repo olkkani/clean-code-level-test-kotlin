@@ -7,6 +7,7 @@ plugins {
 
 	kotlin("jvm") version "1.7.21"
 	kotlin("plugin.spring") version "1.7.21"
+	kotlin("kapt") version "1.7.21"
 }
 
 group = "io.olkkani"
@@ -53,8 +54,11 @@ dependencies {
 	implementation("org.apache.commons:commons-lang3:3.12.0")
 	implementation("commons-io:commons-io:2.11.0")
 	// database
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.postgresql:postgresql:42.5.1")
+	// persistence
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("com.querydsl:querydsl-jpa:5.0.0")
+	kapt("com.querydsl:querydsl-apt:5.0.0:jpa")
 	// other
 	implementation("commons-fileupload:commons-fileupload:1.4")
 }
