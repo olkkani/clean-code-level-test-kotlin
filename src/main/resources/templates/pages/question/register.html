@@ -14,7 +14,7 @@
 </th:block>
 <!-- Content -->
 <div layout:fragment="content">
-    <form action method="post" enctype="multipart/form-data" class="border border-white">
+    <form action method="post" enctype="multipart/form-data" action="/question/save">
 
         <div class="m-2">
             <p for="question" class="h5">문제</p>
@@ -27,11 +27,11 @@
             <div class="row gx-5">
                 <div class="col">
                     <label>선택지 A</label>
-                    <input type="file" class="">
+                    <input type="file" class="" accept="image/*">
                 </div>
                 <div class="col">
                     <label>선택지 B</label>
-                    <input type="file" class="">
+                    <input type="file" class="" accept="image/*">
                 </div>
             </div>
         </div>
