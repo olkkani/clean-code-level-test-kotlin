@@ -1,14 +1,11 @@
 package io.olkkani.question.entity
 
 import lombok.AccessLevel
-import lombok.Builder
-import lombok.Getter
 import lombok.NoArgsConstructor
 import javax.persistence.*
 
 
-//@Getter
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 class Question (
     @field:GeneratedValue(strategy = GenerationType.AUTO) @field:Id private val id: Long,
